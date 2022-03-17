@@ -26,7 +26,7 @@ platform :ios do
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
       output_file: 'sonar.log',
-      reporter: 'sonar'
+      reporter: 'sonarqube'
     )
   end
 end
