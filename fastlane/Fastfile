@@ -20,8 +20,13 @@ platform :ios do
   lane :lint do
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
-      output_file: 'swiftlint.log',
+      output_file: 'checkstyle.log',
       reporter: 'checkstyle'
+    )    
+    swiftlint(
+      executable: 'Pods/SwiftLint/swiftlint',
+      output_file: 'sonar.log',
+      reporter: 'sonar'
     )
   end
 end
