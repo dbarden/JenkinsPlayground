@@ -16,6 +16,7 @@
 		D0A00F8127E3B0BA001DC750 /* JenkinsPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A00F8027E3B0BA001DC750 /* JenkinsPlaygroundTests.swift */; };
 		D0A00F8B27E3B0BA001DC750 /* JenkinsPlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A00F8A27E3B0BA001DC750 /* JenkinsPlaygroundUITests.swift */; };
 		D0A00F8D27E3B0BA001DC750 /* JenkinsPlaygroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A00F8C27E3B0BA001DC750 /* JenkinsPlaygroundUITestsLaunchTests.swift */; };
+		D7C2246B644062A90FB613BD /* libPods-JenkinsPlayground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAB471A5E20AD765FF15A55 /* libPods-JenkinsPlayground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9C613536E9F8FE5F9B4056D /* Pods-JenkinsPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JenkinsPlayground.debug.xcconfig"; path = "Target Support Files/Pods-JenkinsPlayground/Pods-JenkinsPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAB471A5E20AD765FF15A55 /* libPods-JenkinsPlayground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JenkinsPlayground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDAA79946D004C3027121857 /* Pods-JenkinsPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JenkinsPlayground.release.xcconfig"; path = "Target Support Files/Pods-JenkinsPlayground/Pods-JenkinsPlayground.release.xcconfig"; sourceTree = "<group>"; };
 		D0A00F6627E3B0B9001DC750 /* JenkinsPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A00F6927E3B0B9001DC750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A00F6B27E3B0B9001DC750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C2246B644062A90FB613BD /* libPods-JenkinsPlayground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204F3080E5190A8FE301D70D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADAB471A5E20AD765FF15A55 /* libPods-JenkinsPlayground.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98D4DEE2A198F09582050ED7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9C613536E9F8FE5F9B4056D /* Pods-JenkinsPlayground.debug.xcconfig */,
+				CDAA79946D004C3027121857 /* Pods-JenkinsPlayground.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D0A00F5D27E3B0B9001DC750 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				D0A00F7F27E3B0BA001DC750 /* JenkinsPlaygroundTests */,
 				D0A00F8927E3B0BA001DC750 /* JenkinsPlaygroundUITests */,
 				D0A00F6727E3B0B9001DC750 /* Products */,
+				98D4DEE2A198F09582050ED7 /* Pods */,
+				204F3080E5190A8FE301D70D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A00F9027E3B0BA001DC750 /* Build configuration list for PBXNativeTarget "JenkinsPlayground" */;
 			buildPhases = (
+				B939E45FCDE49B5B29CBB362 /* [CP] Check Pods Manifest.lock */,
 				D0A00F6227E3B0B9001DC750 /* Sources */,
 				D0A00F6327E3B0B9001DC750 /* Frameworks */,
 				D0A00F6427E3B0B9001DC750 /* Resources */,
@@ -252,6 +278,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B939E45FCDE49B5B29CBB362 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JenkinsPlayground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0A00F6227E3B0B9001DC750 /* Sources */ = {
@@ -434,6 +485,7 @@
 		};
 		D0A00F9127E3B0BA001DC750 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C613536E9F8FE5F9B4056D /* Pods-JenkinsPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +514,7 @@
 		};
 		D0A00F9227E3B0BA001DC750 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAA79946D004C3027121857 /* Pods-JenkinsPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
