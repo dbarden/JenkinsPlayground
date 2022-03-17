@@ -19,7 +19,8 @@ platform :ios do
   desc "Description of what the lane does"
   lane :lint do
     swiftlint(
-      executable: 'Pods/SwiftLint/swiftlint'
+      executable: 'Pods/SwiftLint/swiftlint',
+      output_file: 'swiftlint.log'
     )
   end
 end
