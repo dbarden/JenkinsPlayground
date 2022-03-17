@@ -21,12 +21,14 @@ platform :ios do
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
       output_file: 'checkstyle.log',
-      reporter: 'checkstyle'
+      reporter: 'checkstyle',
+      ignore_exit_status: true
     )    
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
       output_file: 'sonar.log',
-      reporter: 'sonarqube'
+      reporter: 'sonarqube',
+      ignore_exit_status: true
     )
   end
 end
