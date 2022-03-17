@@ -33,7 +33,7 @@ platform :ios do
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
       output_file: 'junit.log',
-      reporter: 'codeclimate',
+      reporter: 'junit',
       ignore_exit_status: true
     )
   end
