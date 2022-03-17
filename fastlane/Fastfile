@@ -30,5 +30,11 @@ platform :ios do
       reporter: 'sonarqube',
       ignore_exit_status: true
     )
+    swiftlint(
+      executable: 'Pods/SwiftLint/swiftlint',
+      output_file: 'codeclimate.log',
+      reporter: 'codeclimate',
+      ignore_exit_status: true
+    )
   end
 end
