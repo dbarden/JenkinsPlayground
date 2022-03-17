@@ -26,13 +26,13 @@ platform :ios do
     )    
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
-      output_file: 'sonar.log',
       reporter: 'sonarqube',
+      output_file: 'sonar-report.json'
       ignore_exit_status: true
     )
     swiftlint(
       executable: 'Pods/SwiftLint/swiftlint',
-      output_file: 'codeclimate.log',
+      output_file: 'junit.log',
       reporter: 'codeclimate',
       ignore_exit_status: true
     )
